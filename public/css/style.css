@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    h5, #configh5{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    min-width: 525px;
+}

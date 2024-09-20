@@ -1,0 +1,110 @@
+.submit-lente {
+    position:absolute;
+    top:6px; left: 0;
+    z-index:1;
+    border:none;
+    background:transparent;
+    outline:none;
+}
+
+.submit-line {
+    position: relative;
+    margin-left: 5px;
+    width: 95%;
+}
+
+.submit-line input {
+    width: 100%;
+    margin-left: 25px;
+}
+.search-container {
+    background: rgb(0,148,46);
+    background: linear-gradient(90deg, rgb(4, 186, 62) 0%, rgba(0,255,121,1) 93%);
+    border: 5px solid #0000000c;
+    padding: 7px;
+    border-radius: 0.27rem;
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+#searchInput {
+    font-size: 1.16rem; /* Texto maior */
+    width: 100%; /* Ocupa a linha inteira */
+    padding: 0.75rem; /* Espaçamento interno */
+    border: none;
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    color: white;
+    background: transparent;
+}
+
+#searchInput::placeholder {
+    color: #ffffff; /* Cor do texto do placeholder */
+}
+
+#addAlunoBtn{
+    position:absolute;
+    bottom:18px;
+    right:15px;
+    margin:0;
+    padding:5px 3px;
+    width: 45px;
+    height: 45px;
+    background-color: #4caf50;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f9fafc;
+}
+
+.table thead th {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.card {
+    border-radius: 0.75rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination */
+.pagination .page-item.active .page-link {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.pagination .page-link {
+    color: #6c757d;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    font-style: normal;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin: auto;
+    color: #212529;
+}
+
+.table th, .table td {
+    white-space: nowrap; /* Para evitar quebra de texto, se necessário */
+}
