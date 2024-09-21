@@ -1,7 +1,13 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Listagem de alunos')
+
+@section('content_header')
+    <h1 class="bg-white rounded md:text-start text-center">Área de Início</h1>
+@stop
 
 @section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,9 +21,21 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> --}}
+
+@stop
+
+@section('css')
+    <style>
+
+    </style>
+@stop
+
+@section('js')
+
+@stop

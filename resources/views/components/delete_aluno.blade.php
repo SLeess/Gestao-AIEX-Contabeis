@@ -1,5 +1,5 @@
 <div style="display: inline-block">
-    <form action="{{ Route('aluno.destroy', $alunoID) }}" method="POST">
+    <form action="{{ Route('alunos.destroy', $alunoID) }}" method="POST">
         @csrf
         @method('DELETE')
         <button style="width: 23px; height: 23px;" type="submit" class="d-inline-block btn btn-outline-danger btn-sm">

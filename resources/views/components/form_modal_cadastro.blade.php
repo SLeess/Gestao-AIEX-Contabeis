@@ -1,7 +1,7 @@
 <div>
     <x-adminlte-button id="addAlunoBtn" label="+" data-toggle="modal" data-target="#addAluno"/>
     <x-adminlte-modal theme="green" id="addAluno" title="Novo Aluno">
-        <form method="post" action="{{ Route("aluno.store") }}" id="alunoForm" class="g-3 needs-validation">
+        <form method="post" action="{{ Route("alunos.store") }}" id="alunoForm" class="g-3 needs-validation">
             @csrf
             <div class="row">
                 <div class="form-group col-md-6">

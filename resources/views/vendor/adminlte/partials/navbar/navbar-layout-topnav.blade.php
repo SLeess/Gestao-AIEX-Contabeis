@@ -1,6 +1,6 @@
 <nav class="main-header navbar
     {{ config('adminlte.classes_topnav_nav', 'navbar-expand-md') }}
-    {{ config('adminlte.classes_topnav', 'navbar-white navbar-light') }}">
+    {{ config('adminlte.classes_topnav', 'navbar-white navbar-light') }}" style="background: linear-gradient(15deg, #11998ebe, #39be6cb7, #11998ebe, #0c857bc5">
 
     <div class="{{ config('adminlte.classes_topnav_container', 'container') }}">
 

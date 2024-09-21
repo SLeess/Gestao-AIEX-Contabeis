@@ -15,3 +15,8 @@
 body {
     min-width: 525px;
 }
+
+.content{
+    min-height: 84.1vh;
+    min-width: 94vw;
+}

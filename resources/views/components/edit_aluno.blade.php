@@ -11,7 +11,7 @@
     </a>
 
     <x-adminlte-modal theme="yellow" id="editAluno{{ $aluno->id }}" title="Editar Aluno: {{ $aluno->nome }}">
-        <form method="post" action="{{ Route("aluno.update", $aluno->id) }}" id="{{ $aluno->id }}EditalunoForm" class="g-3 needs-validation">
+        <form method="post" action="{{ Route("alunos.update", $aluno->id) }}" id="{{ $aluno->id }}EditalunoForm" class="g-3 needs-validation">
             @csrf
             @method('PATCH')
             <div class="row">

@@ -7,6 +7,11 @@
     outline:none;
 }
 
+.content{
+    min-height: 100vh;
+    min-width: 94vw;
+}
+
 .submit-line {
     position: relative;
     margin-left: 5px;

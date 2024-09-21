@@ -2,6 +2,10 @@
 
 @section('title', 'Listagem de alunos')
 
+@section('body_data')
+style="background-color: red;"
+@stop
+
 @section('content_header')
     {{-- <h1 class="bg-white rounded md:text-start text-center">Controle de Alunos</h1> --}}
 @stop
