@@ -17,7 +17,7 @@
     <div class="wrapper" style="margin: auto;">
         <form action="{{ $login_url }}" method="post" class="form">
             @csrf
-            <h1 class="pt-2 title">Inicio</h1>
+            <h1 class="title oswald" style="margin-top: 13px; margin-bottom: -10px;">Inicio</h1>
 
             {{-- Email field --}}
             <div class="inp">
@@ -32,7 +32,7 @@
             </div>
 
             {{-- Password field --}}
-            <div class="inp pb-2">
+            <div class="inp">
                 <input type="password" name="password" class="input @error('password') is-invalid @enderror"
                        placeholder="{{ __('adminlte::adminlte.password') }}">
                 <i class="fa-solid fa-lock"></i>
