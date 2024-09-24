@@ -321,12 +321,12 @@ return [
             [
                 [
                     'text' => 'Horas de Alunos',
-                    'url' => 'horasAluno/',
+                    'url' => 'admin/horasAluno/',
                     'icon' => 'fas fa-user-plus',
                 ],
                 [
                     'text' => 'Registro de Alunos',
-                    'url' => 'alunos/',
+                    'url' => 'admin/alunos/',
                     'icon' => 'fas fa-calendar',
                     // 'can' => 'manage-blog',
                 ],

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Aiex_System;
+namespace App\Http\Controllers\Aiex_System\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateAlunoFromRequest;
@@ -33,7 +33,7 @@ class AlunoController extends Controller
         // dd($data);
         $aluno = $aluno->create($data);
 
-        return redirect()->route('aluno.index')->with('msg', 'Aluno registrado com sucesso!');
+        return redirect()->route('alunos.index')->with('msg', 'Aluno registrado com sucesso!');
     }
 
     /**
@@ -57,7 +57,7 @@ class AlunoController extends Controller
 
         $aluno->update($request->validated());
 
-        return redirect()->route('aluno.index');
+        return redirect()->route('alunos.index');
     }
 
     /**
@@ -69,6 +69,6 @@ class AlunoController extends Controller
             return back();
 
         $aluno->delete();
-        return redirect()->route('aluno.index');
+        return redirect()->route('alunos.index');
     }
 }
