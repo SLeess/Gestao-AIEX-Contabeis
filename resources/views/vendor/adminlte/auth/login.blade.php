@@ -14,6 +14,9 @@
 {{-- @section('auth_header', __('adminlte::adminlte.login_message')) --}}
 
 @section('auth_body')
+    @php
+        $disable = true;
+    @endphp
     <div class="wrapper" style="margin: auto;">
         <form action="{{ $login_url }}" method="post" class="form">
             @csrf
