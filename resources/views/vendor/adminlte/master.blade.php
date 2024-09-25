@@ -88,7 +88,6 @@
     @if (session()->has('success'))
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                // Swal.fire('Pronto!', "{{ session('success') }}", 'success');
                 Swal.fire({
                     title: 'Success!',
                     text: '{!! \Session::get('success') !!}',

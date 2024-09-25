@@ -6,14 +6,7 @@ use App\Http\Controllers\Aiex_System\Admin\AlunoController;
 use App\Http\Controllers\Aiex_System\Admin\SemesterController;
 use App\Http\Controllers\HomeController;
 
-Route::get('/teste', function () {
-    return 'Admin Dashboard';
-})->name('admin.dashboard');
-
 Route::group([],function () {
-    Route::get('/teste', function () {
-        return 'Admin Dashboard';
-    })->name('admin.dashboard');
 
     Route::resource('alunos', AlunoController::class)
         ->names('alunos')

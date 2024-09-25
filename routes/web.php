@@ -12,14 +12,3 @@ Route::get('/', function (){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Auth::routes();
-// Route::get('/test-semesters', function () {
-//     // Simule a execução do middleware
-//     $semesters = app(\App\Http\Middleware\SemesterMiddleware::class)->handle(request(), function () {
-//         return response()->json(['message' => 'Middleware executado.']);
-//     });
-
-//     return $semesters;
-//     // return 3;
-// })->middleware(SemesterMiddleware::class);
