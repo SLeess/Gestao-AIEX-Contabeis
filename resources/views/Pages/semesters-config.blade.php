@@ -10,7 +10,7 @@
 
 @section('content')
     <div class="row reverse" style="justify-content: center;">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+        <div class="mb-5 col-12 col-sm-12 col-md-12 col-lg-7">
             <x-semester.container_structure_crud_semesters :semestersCount="count($semestres)">
                 <div class="mb-3 search-container">
                     <div class="submit-line">
