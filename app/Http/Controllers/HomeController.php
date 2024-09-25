@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Aiex_System\Admin\{AlunoController};
+use App\Http\Controllers\Aiex_System\Admin\SemesterController;
 class HomeController extends Controller
 {
     /**
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('Pages.home');
+    }
+
+    public function students_register(){
+        $alunos = AlunoController::index();
+     // $semesters = SemesterController::index();
+        return view('Pages.alunos',
+            compact('alunos'));
     }
 }

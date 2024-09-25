@@ -296,7 +296,7 @@ return [
 
     'menu' => [
         // Navbar items:
-        // 'color' =>'blue',
+
         [
             'type'         => 'darkmode-widget',
             'topnav_right' => true, // Or "topnav => true" to place on the left.
@@ -328,6 +328,7 @@ return [
                     'text' => 'Registro de Alunos',
                     'url' => 'admin/alunos/',
                     'icon' => 'fas fa-calendar',
+                    'can'  => 'admin-profile-1',
                     // 'can' => 'manage-blog',
                 ],
             ],
@@ -335,6 +336,7 @@ return [
         [
             'text' => 'Eventos',
             'url' => '#',
+            'icon' => 'fas fa-life-saver (alias)',
             'submenu' => [
                 [
                     'text' => 'Dashboard de Eventos',
@@ -343,23 +345,17 @@ return [
                 [
                     'text' => 'Histórico de Eventos',
                     'url' => '#',
+                    'can'  => 'admin-profile-1',
                 ],
             ],
         ],
-        // ['header' => 'account_settings'],
-        // [
-        //     'text' => 'profile',
-        //     'url' => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-user',
-        //     'submenu' =>
-        //     [
-        //         [
-        //             'text' => 'change_password',
-        //             'url' => 'admin/settings',
-        //             'icon' => 'fas fa-fw fa-lock',
-        //         ],
-        //     ],
-        // ],
+        ['header' => 'Controle de Semestres'],
+        [
+            'text' => 'Semestre',
+            'url' => 'admin/semestres/',
+            'icon' => 'fas  fa-bars',
+            'can' => 'admin-profile-1'
+        ],
     ],
 
     /*
@@ -496,7 +492,7 @@ return [
             'fullscreen' => true,
         ],
         'options' => [
-            'loading_screen' => 1000,
+            'loading_screen' => 100,
             'auto_show_new_tab' => true,
             'use_navbar_items' => true,
         ],

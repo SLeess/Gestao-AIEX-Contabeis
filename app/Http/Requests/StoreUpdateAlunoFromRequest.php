@@ -22,7 +22,7 @@ class StoreUpdateAlunoFromRequest extends FormRequest
      */
     public function rules(): array
     {
-        $alunoID = $this->route('aluno');
+        $alunoID = $this->route('student');
 
         $rules = [
             "matricula" => [

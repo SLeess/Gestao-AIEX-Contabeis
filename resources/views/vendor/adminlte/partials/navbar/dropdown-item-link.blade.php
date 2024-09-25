@@ -20,7 +20,6 @@
                 {{ $item['label'] }}
             </span>
         @endisset
-
     </a>
 
 </li>

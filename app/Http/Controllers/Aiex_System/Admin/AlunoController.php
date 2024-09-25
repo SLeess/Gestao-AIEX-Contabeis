@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Aiex_System\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateAlunoFromRequest;
 use App\Models\Aiex_System\Aluno;
+use App\Models\Aiex_System\Semester;
 use Illuminate\Http\Request;
 
 class AlunoController extends Controller
@@ -12,11 +13,10 @@ class AlunoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public static function index()
     {
-        $alunos = Aluno::all();
-
-        return view('Pages.alunos', compact("alunos"));
+        return Aluno::all();;
+        // return view('Pages.alunos', compact("alunos", "semesters"));
     }
 
     /**
@@ -52,6 +52,7 @@ class AlunoController extends Controller
      */
     public function update(StoreUpdateAlunoFromRequest $request, string|int $id)
     {
+        // dd(Aluno::find($id));
         if(!$aluno = Aluno::find($id))
             return back();
 

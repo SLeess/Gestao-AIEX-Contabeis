@@ -15,7 +15,7 @@
     </ul>
 
     {{-- Navbar right links --}}
-    <ul class="navbar-nav ml-auto">
+    <ul class="ml-auto navbar-nav">
         {{-- Custom right links --}}
         @yield('content_top_nav_right')
 
