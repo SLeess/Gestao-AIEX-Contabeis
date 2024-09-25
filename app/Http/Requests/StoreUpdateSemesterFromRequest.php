@@ -22,14 +22,19 @@ class StoreUpdateSemesterFromRequest extends FormRequest
      */
     public function rules(): array
     {
-        $semesterID = $this->route('semester');
+        // dd($this);
+        $semesterID = $this->route('identify');
         return [
             "identificador" => [
                 "required",
                 "min:6",
                 "max:6",
                 'regex:/^(19[0-9]{2}|20[0-9]{2})-(1|2)$/',
-                Rule::unique('identificador')->ignore($semesterID),
+                Rule::unique('semesters')->ignore($semesterID),
+            ],
+            "made_by" => [
+                // "required",
+                "string",
             ]
         ];
     }
@@ -37,7 +42,9 @@ class StoreUpdateSemesterFromRequest extends FormRequest
     public function messages(): array
     {
         return [
-            "identificador.required" => "É obrigatório indicar o semestre de curso"
+            "identificador.required" => "É obrigatório indicar o semestre de curso",
+            "identificador.min" => "O identificador deve seguir o formato YYYY-SS",
+            "identificador" => "Formato incorreto",
         ];
     }
 }

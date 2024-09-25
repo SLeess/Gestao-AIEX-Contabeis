@@ -1,17 +1,17 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Semester;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class container_structure_crud_alunos extends Component
+class form_modal_semester_include extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(protected $contagem)
+    public function __construct()
     {
         //
     }
@@ -21,6 +21,6 @@ class container_structure_crud_alunos extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.containers.container_structure_crud_alunos', compact('contagem'));
+        return view('components.semester.form_modal_semester_include');
     }
 }

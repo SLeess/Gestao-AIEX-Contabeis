@@ -26,7 +26,8 @@
 
     {{-- Main Content --}}
     {{-- background: linear-gradient(15deg,green, #7a53a1,rebeccapurple,#7a53a1, lightgreen); --}}
-    <div class="content" style="background: linear-gradient(15deg, #11998E, #1fc960)">
+    {{-- background: linear-gradient(15deg, #11998E, #1fc960) --}}
+    <div class="content">
         <div class="{{ config('adminlte.classes_content') ?: $def_container_class }}">
             @stack('content')
             @yield('content')

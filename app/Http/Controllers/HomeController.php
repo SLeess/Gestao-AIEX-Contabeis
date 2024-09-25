@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
 
     public function students_register(){
-        $alunos = AlunoController::index();
+        $alunos = AlunoController::indexStatic();
      // $semesters = SemesterController::index();
         return view('Pages.alunos',
             compact('alunos'));

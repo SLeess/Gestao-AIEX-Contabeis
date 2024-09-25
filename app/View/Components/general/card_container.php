@@ -1,19 +1,19 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\generaL;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class delete_aluno extends Component
+class card_container extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(protected $alunoID)
+    public function __construct()
     {
-        // $this->alunoID = $alunoID;
+        //
     }
 
     /**
@@ -21,6 +21,6 @@ class delete_aluno extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.delete_aluno', compact('alunoID'));
+        return view('components.general.card_container');
     }
 }

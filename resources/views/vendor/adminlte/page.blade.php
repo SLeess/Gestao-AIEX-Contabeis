@@ -4,6 +4,11 @@
 @inject('preloaderHelper', 'JeroenNoten\LaravelAdminLte\Helpers\PreloaderHelper')
 
 @section('adminlte_css')
+    <style>
+        .content-wrapper {
+            background: transparent;
+        }
+    </style>
     @stack('css')
     @yield('css')
 @stop

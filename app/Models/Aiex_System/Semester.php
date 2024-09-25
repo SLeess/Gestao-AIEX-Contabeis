@@ -11,5 +11,6 @@ class Semester extends Model
 
     protected $fillable = [
         'identificador',
+        'made_by',
     ];
 }

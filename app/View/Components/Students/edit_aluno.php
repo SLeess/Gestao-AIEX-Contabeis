@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Students;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class edit_aluno extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.edit_aluno', compact('aluno'));
+        return view('components.students.edit_aluno', compact('aluno'));
     }
 }

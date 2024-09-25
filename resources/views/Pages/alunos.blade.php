@@ -3,7 +3,7 @@
 @section('title', 'Listagem de alunos')
 
 @section('body_data')
-style="background-color: red;"
+{{-- style="background-color: red;" --}}
 @stop
 
 @section('content_header')
@@ -13,10 +13,10 @@ style="background-color: red;"
 @section('content')
     @can('admin-profile-1')
         @if(count($alunos) > 0)
-            <x-container_structure_crud_alunos :contagem="count($alunos)">
+            <x-students.container_structure_crud_alunos :contagem="count($alunos)">
                 <div class="mb-3 search-container">
                     <div class="submit-line">
-                        <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar..." aria-label="Search">
+                        <input type="text" id="searchInputAlunos" class="form-control searchInput" placeholder="Pesquisar..." aria-label="Search">
                         <button class="submit-lente" type="submit">
                             <i class="fa fa-search"></i>
                         </button>
@@ -49,8 +49,9 @@ style="background-color: red;"
                                     {{-- <td data-title="Data de Criação">{{ $aluno->created_at }}</td> --}}
                                     <td>
                                         @can('admin-profile-1')
-                                            <x-edit_aluno :aluno="$aluno"/>
-                                            <x-delete_aluno :alunoID="$aluno->id"/>
+                                            <x-students.edit_aluno :aluno="$aluno"/>
+                                            {{-- <x-students.delete_aluno :alunoID="$aluno->id"/> --}}
+                                            <x-general.form_delete :id="$aluno->id" :route="'alunos.destroy'"/>
                                         @endcan
                                     </td>
                                 </tr>
@@ -59,12 +60,12 @@ style="background-color: red;"
                     </table>
                     </div>
                 </div>
-            </x-container_structure_crud_alunos>
+            </x-students.container_structure_crud_alunos>
         @else
             <p class="text-4xl text-center">Nenhum aluno está cadastrado!</p>
         @endif
 
-        <x-form_modal_cadastro/>
+        <x-students.form_modal_cadastro/>
     @endcan
 @stop
 
@@ -72,7 +73,8 @@ style="background-color: red;"
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css">
 
-    <link rel="stylesheet" href="{{ asset('css/crud_alunos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/crud_css/crud_alunos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/crud_css/crud_types.css') }}">
 @stop
 
 @section('js')
@@ -80,5 +82,7 @@ style="background-color: red;"
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
 
-    <script type="text/javascript" src="{{ asset('js/crud_alunos.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/crud_jss/crud_alunos.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/crud_jss/crud_types.js') }}"></script>
+    <script type="text/javascript"></script>
 @stop

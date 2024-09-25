@@ -13,12 +13,15 @@ class AlunoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public static function index()
+    public static function indexStatic()
     {
         return Aluno::all();;
-        // return view('Pages.alunos', compact("alunos", "semesters"));
     }
 
+    public function index(){
+        $alunos = Aluno::all();
+        return view('Pages.alunos', compact("alunos"));
+    }
     /**
      * Store a newly created resource in storage.
      */
@@ -33,7 +36,7 @@ class AlunoController extends Controller
         // dd($data);
         $aluno = $aluno->create($data);
 
-        return redirect()->route('alunos.index')->with('msg', 'Aluno registrado com sucesso!');
+        return redirect()->route('students.register')->with('msg', 'Aluno registrado com sucesso!');
     }
 
     /**
@@ -58,7 +61,7 @@ class AlunoController extends Controller
 
         $aluno->update($request->validated());
 
-        return redirect()->route('alunos.index');
+        return redirect()->route('students.register');
     }
 
     /**
@@ -70,6 +73,6 @@ class AlunoController extends Controller
             return back();
 
         $aluno->delete();
-        return redirect()->route('alunos.index');
+        return redirect()->route('students.register');
     }
 }

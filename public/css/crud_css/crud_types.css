@@ -31,7 +31,7 @@
     margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-#searchInput {
+.searchInput {
     font-size: 1.16rem; /* Texto maior */
     width: 100%; /* Ocupa a linha inteira */
     padding: 0.75rem; /* Espaçamento interno */
@@ -41,20 +41,10 @@
     background: transparent;
 }
 
-#searchInput::placeholder {
+.searchInput::placeholder {
     color: #ffffff; /* Cor do texto do placeholder */
 }
 
-#addAlunoBtn{
-    position:absolute;
-    bottom:18px;
-    right:15px;
-    margin:0;
-    padding:5px 3px;
-    width: 45px;
-    height: 45px;
-    background-color: #4caf50;
-}
 
 .table-hover tbody tr:hover {
     background-color: #f9fafc;

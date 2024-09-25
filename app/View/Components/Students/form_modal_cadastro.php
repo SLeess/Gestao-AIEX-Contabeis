@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Students;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class container_structure_crud_semesters extends Component
+class form_modal_cadastro extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class container_structure_crud_semesters extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.container_structure_crud_semesters', compact('semestersCount'));
+        return view('components.students.form_modal_cadastro');
     }
 }

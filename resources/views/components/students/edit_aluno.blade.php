@@ -81,8 +81,8 @@
                 </div>
             </div>
             <input type="hidden" name="user_id" value="" id="{{ $aluno->id }}Edituser_id" aria-describedby="userHelp">
-            <div class="col-12 d-flex justify-content-end mt-3">
-                <button class="btn btn-warning text-center offset-4 mr-2" type="submit">Cadastrar Aluno</button>
+            <div class="mt-3 col-12 d-flex justify-content-end">
+                <button class="mr-2 text-center btn btn-warning offset-4" type="submit">Cadastrar Aluno</button>
                 <x-adminlte-button style="background-color: #f77166;" theme="danger" label="Fechar" data-dismiss="modal"/>
             </div>
             <x-slot name="footerSlot">

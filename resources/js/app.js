@@ -7,6 +7,9 @@
 import './bootstrap';
 import 'bootstrap';
 import { createApp } from 'vue';
+// import App from './App.vue';
+
+// const app = createApp(App).mount('#app');
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin

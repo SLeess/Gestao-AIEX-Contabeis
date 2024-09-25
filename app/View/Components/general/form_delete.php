@@ -1,19 +1,18 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\general;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class form_modal_cadastro extends Component
+class form_delete extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(protected $route, protected $id)
     {
-        //
     }
 
     /**
@@ -21,6 +20,6 @@ class form_modal_cadastro extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.form_modal_cadastro');
+        return view('components.general.form_delete', compact('route','id'));
     }
 }

@@ -57,8 +57,3 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value = aplicarMascaraTelefone(e.target.value);
     });
 });
-window.addEventListener('resize', function() {
-    if(window.outerWidth < 525) {
-        window.resizeTo(525, window.outerHeight);
-    }
-}, true);

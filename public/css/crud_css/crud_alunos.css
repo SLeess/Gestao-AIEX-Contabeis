@@ -1,0 +1,10 @@
+#addAlunoBtn{
+    position:absolute;
+    bottom:18px;
+    right:15px;
+    margin:0;
+    padding:5px 3px;
+    width: 45px;
+    height: 45px;
+    background-color: #4caf50;
+}

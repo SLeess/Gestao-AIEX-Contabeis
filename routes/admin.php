@@ -23,16 +23,6 @@ Route::group([],function () {
         ->name('students.register');
 
     Route::resource('semestres', SemesterController::class)
-        ->names('semester')
+        ->names('semesters')
         ->parameters(['semestres'=> 'identify']);
 });
-
-
-// Route::resource('alunos', AlunoController::class)
-//     ->names('alunos')
-//     ->parameters(["alunos" => "student"]);
-
-/*Route::delete('/alunos/{student}', [AlunoController::class, 'destroy'])
-    ->name('alunos.destroy')
-    ->middleware('can: update-alunos');*/
-

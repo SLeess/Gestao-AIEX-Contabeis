@@ -82,7 +82,36 @@
 
 </head>
 
-<body class="@yield('classes_body')" @yield('body_data')>
+<body class="@yield('classes_body')" @yield('body_data') style="background: linear-gradient(15deg, #11998E, #1fc960);@yield('body_style')">
+
+    {{----- Como usar o Swal no Laravel: https://celke.com.br/artigo/como-usar-sweetalert2-no-laravel-10-com-vite -----}}
+    @if (session()->has('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Swal.fire('Pronto!', "{{ session('success') }}", 'success');
+                Swal.fire({
+                    title: 'Success!',
+                    text: '{!! \Session::get('success') !!}',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                });
+            })
+        </script>
+    @endif
+    @if ($errors->any())
+        @php
+            $mensagem = '';
+            foreach ($errors->all() as $error) {
+                $mensagem .= $error . '<br>';
+            }
+        @endphp
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                Swal.fire('Erro!', "{!! $mensagem !!}", 'error');
+            })
+        </script>
+    @endif
+    {{-----------------------------------------------------------------------------------------------------------------}}
 
     {{-- Body Content --}}
     @yield('body')
