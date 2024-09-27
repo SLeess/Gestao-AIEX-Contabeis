@@ -14,9 +14,91 @@
 
 body {
     min-width: 360px;
+    background-image: url('../background.jpg');
 }
 
 .content{
     min-height: 84.1vh;
     min-width: 94vw;
+}
+
+/*------------------- Sobre a transição da navbar -------------------*/
+
+.parallax, .parallax.blurred:before {
+    background-attachment: fixed;
+}
+
+
+#content-wrapper{
+    background: transparent;
+}
+
+
+/* @media (min-width: 992px) { */
+.navbar-sticky {
+    background-color: #fff;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    /* transition: 200ms linear; */
+    transition: all 250ms ease-in-out;
+}
+
+
+/* } */
+
+.nav-fixed-top {
+    background-color: transparent;
+    /* transition: 200ms linear; */
+    transition: all 250ms ease-in-out;
+}
+
+/* nav.nav-fixed-top + * {
+    color: white;!important;
+} */
+
+nav.nav-fixed-top * ,
+nav.nav-fixed-top .nav-link{
+    color: white;!important;
+}
+
+nav.nav-fixed-top *:hover {
+    color: #00f2ff;!important;
+}
+
+nav.nav-fixed-top *:hover {
+    color: #00f2ff;!important;
+}
+
+.nav-fixed-top .dropdown-menu{
+    background: #38048cba;!important
+}
+
+.nav-fixed-top .dropdown.show > a{
+    color: floralwhite;;!important;
+}
+
+nav.nav-fixed-top .nav-link.active{
+    color: #ffe068e3;
+}
+
+.nav-fixed-top select *,
+.nav-fixed-top select{
+    color: black;
+}
+
+nav.nav-fixed-top.main-header {
+    border-bottom: 0px solid #dee2e6;!important
+}
+
+nav.nav-fixed-top #toggle-icon{
+    filter: brightness(0) invert(1);!important
+}
+
+#toggle-icon{
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }

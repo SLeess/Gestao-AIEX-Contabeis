@@ -12,8 +12,8 @@
     height: 395px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 3px solid #00ffff;
-    box-shadow: 0 0 50px 0 #00a6bc;
+    border: 3px solid #9223dc;
+    box-shadow: 0 0 50px 0 #38048c;
 }
 
 .form {
@@ -40,8 +40,17 @@
     margin-top: 40px;
     padding-right: 10px;
     font-size: 17px;
-    color: #0ef;
+    color: #aa79fb;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
 
 .submit {
     border: none;
@@ -53,7 +62,8 @@
     border-radius: 40px;
     letter-spacing: 1px;
     cursor: pointer;
-    background: linear-gradient(45deg, #0ef, #c800ff);
+    background-image: url('../background.jpg');
+    background-attachment: fixed;
 }
 
 .footer {
@@ -63,7 +73,7 @@
 }
 
 .link {
-    color: #0ef;
+    color: #aa79fb;
     text-decoration: none;
 }
 
@@ -73,7 +83,8 @@
     right: 0;
     width: 420px;
     height: 389.3px;
-    background: linear-gradient(to right, #0ef, #c800ff);
+    background-image: url('../background.jpg');
+    background-attachment: fixed;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
     padding-right: 70px;
     text-align: right;

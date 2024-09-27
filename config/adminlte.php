@@ -191,16 +191,16 @@ return [
     |
     */
 
-    'classes_body' => '',
+    'classes_body' => 'layout-navbar-fixed',
     'classes_brand' => '',
     'classes_brand_text' => '',
-    'classes_content_wrapper' => '',
+    'classes_content_wrapper' => 'parallax',
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-dark custon-navbar',
-    'classes_topnav_nav' => 'navbar-expand-md',
+    'classes_topnav' => 'custon-navbar navbar nav-fixed-top',
+    'classes_topnav_nav' => 'navbar-expand-lg',
     'classes_topnav_container' => 'container',
 
     /*
@@ -349,7 +349,7 @@ return [
                 ],
             ],
         ],
-        ['header' => 'Controle de Semestres'],
+        // ['header' => 'Controle de Semestres'],
         [
             'text' => 'Semestre',
             'url' => 'admin/semestres/',

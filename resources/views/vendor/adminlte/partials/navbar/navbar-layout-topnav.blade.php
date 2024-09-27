@@ -1,6 +1,7 @@
-<nav class="main-header navbar
+<nav id="navBarAiex" class="main-header navbar
     {{ config('adminlte.classes_topnav_nav', 'navbar-expand-md') }}
-    {{ config('adminlte.classes_topnav', 'navbar-white navbar-light') }}" style="background: linear-gradient(15deg, #11998ebe, #39be6cb7, #11998ebe, #0c857bc5">
+    {{ config('adminlte.classes_topnav', 'navbar-white navbar-light') }}">
+    {{-- style="background: linear-gradient(15deg, #11998ebe, #39be6cb7, #11998ebe, #0c857bc5" --}}
 
     <div class="{{ config('adminlte.classes_topnav_container', 'container') }}">
 
@@ -14,7 +15,7 @@
         {{-- Navbar toggler button --}}
         <button class="order-1 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span id="toggle-icon" class="navbar-toggler-icon"></span>
         </button>
 
         {{-- Navbar collapsible menu --}}

@@ -81,21 +81,31 @@
     @endif
 
 </head>
-
-<body class="@yield('classes_body')" @yield('body_data') style="background: linear-gradient(15deg, #11998E, #1fc960);@yield('body_style')">
+{{-- style="background: linear-gradient(15deg, #11998E, #1fc960); --}}
+<body class="@yield('classes_body')" @yield('body_data') @yield('body_style')">
 
     {{----- Como usar o Swal no Laravel: https://celke.com.br/artigo/como-usar-sweetalert2-no-laravel-10-com-vite -----}}
     @if (!isset($disable))
         @if (session()->has('success'))
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    Swal.fire({
-                        title: 'Sucesso!',
-                        text: '{!! \Session::get('success') !!}',
-                        icon: 'success',
-                        confirmButtonText: 'Prosseguir'
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: "top-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.onmouseenter = Swal.stopTimer;
+                            toast.onmouseleave = Swal.resumeTimer;
+                        }
                     });
-                })
+                    Toast.fire({
+                        icon: "success",
+                        title: "Signed in successfully",
+                        text: '{!! \Session::get('success') !!}',
+                    });
+                });
             </script>
         @endif
 
