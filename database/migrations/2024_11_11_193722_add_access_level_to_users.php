@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('semesters', function (Blueprint $table) {
-            $table->string('made_by')
-                  ->nullable(false)
-                  ->default("Admin")
-                  ->after("identificador");
+        Schema::table('users', function (Blueprint $table) {
+            $table->tinyInteger('access_level')
+                  ->default(0)
+                  ->nullable(false);
         });
     }
 
@@ -24,8 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('semesters', function (Blueprint $table) {
-            $table->dropColumn('made_by');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('access_level');
         });
     }
 };

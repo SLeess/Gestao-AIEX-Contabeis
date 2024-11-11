@@ -5,13 +5,14 @@ window.addEventListener('resize', function() {
     }
 }, true);
 
-window.onscroll = function() {
+window.onscroll = () => changeSchema(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50);
+
+function changeSchema(isScrolled) {
     const navbar = document.getElementById("navBarAiex");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        navbar.classList.add("navbar-sticky");
-        navbar.classList.remove("nav-fixed-top")
-    } else {
-        navbar.classList.remove("navbar-sticky");
-        navbar.classList.add("nav-fixed-top")
-    }
-};
+    const isNavbarCollapsed = $("#navbarCollapse").hasClass('show');
+
+    navbar.classList.toggle("navbar-sticky", isScrolled || isNavbarCollapsed);
+    navbar.classList.toggle("nav-fixed-top", !isScrolled && !isNavbarCollapsed);
+}
+
+$("#navBarAiex div button").button().click(() => changeSchema(true));

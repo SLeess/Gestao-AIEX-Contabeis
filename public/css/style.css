@@ -35,7 +35,7 @@ body {
 
 
 /* @media (min-width: 992px) { */
-.navbar-sticky {
+.navbar-sticky  /*,.show*/{
     background-color: #fff;
     top: 0;
     position: fixed;

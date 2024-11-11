@@ -26,6 +26,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('admin-profile-1', function (User $user) {
+            // dd($user->access_level === 1);
             return $user->access_level === 1;
         });
     }

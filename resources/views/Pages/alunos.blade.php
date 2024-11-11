@@ -12,7 +12,6 @@
 
 @section('content')
     @can('admin-profile-1')
-        @if(count($alunos) > 0)
             <x-students.container_structure_crud_alunos :contagem="count($alunos)">
                 <div class="mb-3 search-container">
                     <div class="submit-line">
@@ -38,33 +37,31 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($alunos as $aluno)
-                                <tr>
-                                    {{-- <td><input type="checkbox" /></td> --}}
-                                    <td data-title="Matrícula" class="ml-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $aluno->matricula }}</td>
-                                    <td data-title="Nome">{{ $aluno->nome }}</td>
-                                    <td data-title="Email">{{ $aluno->email }}</td>
-                                    <td data-title="Telefone">{{ $aluno->telefone }}</td>
-                                    <td data-title="Semestre de Ingresso">{{ $aluno->semestre_ingresso }}</td>
-                                    {{-- <td data-title="Data de Criação">{{ $aluno->created_at }}</td> --}}
-                                    <td>
-                                        @can('admin-profile-1')
-                                            <x-students.edit_aluno :aluno="$aluno"/>
-                                            {{-- <x-students.delete_aluno :alunoID="$aluno->id"/> --}}
-                                            <x-general.form_delete :id="$aluno->id" :route="'alunos.destroy'"/>
-                                        @endcan
-                                    </td>
-                                </tr>
-                            @endforeach
+                            @if(count($alunos) > 0)
+                                @foreach($alunos as $aluno)
+                                    <tr>
+                                        {{-- <td><input type="checkbox" /></td> --}}
+                                        <td data-title="Matrícula" class="ml-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $aluno->matricula }}</td>
+                                        <td data-title="Nome">{{ $aluno->nome }}</td>
+                                        <td data-title="Email">{{ $aluno->email }}</td>
+                                        <td data-title="Telefone">{{ $aluno->telefone }}</td>
+                                        <td data-title="Semestre de Ingresso">{{ $aluno->semestre_ingresso }}</td>
+                                        {{-- <td data-title="Data de Criação">{{ $aluno->created_at }}</td> --}}
+                                        <td>
+                                            @can('admin-profile-1')
+                                                <x-students.edit_aluno :aluno="$aluno"/>
+                                                {{-- <x-students.delete_aluno :alunoID="$aluno->id"/> --}}
+                                                <x-general.form_delete :id="$aluno->id" :route="'alunos.destroy'"/>
+                                            @endcan
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
                         </tbody>
                     </table>
                     </div>
                 </div>
             </x-students.container_structure_crud_alunos>
-        @else
-            <p class="text-4xl text-center">Nenhum aluno está cadastrado!</p>
-        @endif
-
         <x-students.form_modal_cadastro/>
     @endcan
 @stop

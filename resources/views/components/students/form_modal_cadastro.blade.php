@@ -1,5 +1,7 @@
 <div>
-    <x-adminlte-button id="addAlunoBtn" label="+" data-toggle="modal" data-target="#addAluno"/>
+    <div style="display: flex;justify-content: flex-end;">
+        <x-adminlte-button id="addAlunoBtn" label="+" data-toggle="modal" data-target="#addAluno"/>
+    </div>
     <x-adminlte-modal theme="green" id="addAluno" title="Novo Aluno">
         <form method="post" action="{{ Route("alunos.store") }}" id="alunoForm" class="g-3 needs-validation">
             @csrf
@@ -58,8 +60,8 @@
                 </div>
             </div>
             <input type="hidden" name="user_id" value="" id="user_id" aria-describedby="userHelp">
-            <div class="col-12 d-flex justify-content-end mt-3">
-                <button style="--tw-bg-opacity: 0.85; background-color: rgb(22 163 74 / var(--tw-bg-opacity));" class="btn btn-primary text-center offset-4 mr-2" type="submit">Cadastrar Aluno</button>
+            <div class="mt-3 col-12 d-flex justify-content-end">
+                <button style="--tw-bg-opacity: 0.85; background-color: rgb(22 163 74 / var(--tw-bg-opacity));" class="mr-2 text-center btn btn-primary offset-4" type="submit">Cadastrar Aluno</button>
                 <x-adminlte-button style="background-color: #f77166;" theme="danger" label="Fechar" data-dismiss="modal"/>
             </div>
             <x-slot name="footerSlot">
